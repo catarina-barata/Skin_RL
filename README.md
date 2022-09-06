@@ -11,5 +11,14 @@ The models were trained on Microsoft Windows 10 Pro 64bit and Ubunto 18.04
 
 ### Installation
 * To install the required packages: pip install -r requirements.txt
-* To install the demo: Follow https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository and use the following link #https://github.com/catarina-barata/Skin_RL.git
+* To install the demo: Follow https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository and use the following link https://github.com/catarina-barata/Skin_RL.git
+
+### Run Demo
+To run the demo (train an RL agent and make predictions on a validation set):
+1) Go  to the corresponding directory
+
+2) Run python RL_Skin_Cancer_Demo.py
+
+3) You can manipulate the **number of patients per episode** (episode length/number of iterations), the **number of episodes**, and whether to **use of nor the unknown action**.
+An example: - python RL_Skin_Cancer_Demo.py --
  
