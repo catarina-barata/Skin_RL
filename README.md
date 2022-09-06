@@ -19,6 +19,6 @@ To run the demo (train an RL agent and make predictions on a validation set):
 
 2) Run python RL_Skin_Cancer_Demo.py
 
-3) You can manipulate the **number of patients per episode** (episode length/number of iterations), the **number of episodes**, and whether to **use of nor the unknown action**.
+3) You can manipulate the **number of patients per episode** (episode length/number of iterations), the **number of episodes**, and whether to **use or not the unknown action**.
 An example: - python RL_Skin_Cancer_Demo.py --
  
