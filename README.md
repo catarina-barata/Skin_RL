@@ -10,11 +10,6 @@ However, given the type of data and the characterisitcs of the deep Q-learning m
 The models were trained on Microsoft Windows 10 Pro 64bit and Ubunto 18.04
 
 ### Installation
-To run the demo, it is necessary to install the following python packages:
-* Python >= 3.8
-* tensorflow==2.8.0
-* numpy
-* scikit-learn
-* pandas
-
+* To install the required packages: pip install -r requirements.txt
+* To install the demo: git clone 
  
