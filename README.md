@@ -11,5 +11,5 @@ The models were trained on Microsoft Windows 10 Pro 64bit and Ubunto 18.04
 
 ### Installation
 * To install the required packages: pip install -r requirements.txt
-* To install the demo: git clone 
+* To install the demo: Follow https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository and use the following link #https://github.com/catarina-barata/Skin_RL.git
  
