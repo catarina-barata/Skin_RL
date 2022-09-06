@@ -1,0 +1,2 @@
+model_checkpoint_path: "best_q_network_reward_both_100pat_nounkn_mel1_vienna"
+all_model_checkpoint_paths: "best_q_network_reward_both_100pat_nounkn_mel1_vienna"
