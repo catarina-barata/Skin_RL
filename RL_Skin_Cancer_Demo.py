@@ -222,7 +222,6 @@ def main(_):
 
     database = pd.read_csv('data/vectorDB.csv')
 
-
     print(database)
 
     database.head()
