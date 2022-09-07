@@ -26,9 +26,9 @@ An example: - python RL_Skin_Cancer_Demo.py --n_patients 100 --n_episodes 150 --
 You can also use this function to define new reward tables
 
 ### Try your data
-To try new data, some adjusts must be done:
-1) If using the same 7 classes of skin lesions, but different images and/or different CNN - you will need to save the features into a **numpy array** and the probabilities into a .csv. Please check the formats used in the demo examples (data folder).
+To try new data, some modifications must be done:
+1) If using the same 7 classes of skin lesions, but different images and/or different CNN - you just need to save the features into a **numpy array** and the probabilities into a .csv. Please check the formats used in the demo examples (data folder).
 
-2) For new (medical) problems, you will need to adjust the **initialize_clinical_practice** to your dataset, as well as the reward tables.
+2) For new (medical) problems, you will also need to adjust the **initialize_clinical_practice** to your dataset, as well as the reward tables.
 You may also need to adjust the Q-network with additional layers (function **create_q_model**).
  
