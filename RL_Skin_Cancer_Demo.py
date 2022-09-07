@@ -247,8 +247,6 @@ def main(_):
 
     features2 = pd.read_csv("data/vectorDB.csv")
 
-    features2.pop('image')
-    features2.pop('isic_id') #vienna
     features2.pop('dx')
 
     features2 = np.asarray(features2, dtype='float32')
@@ -312,7 +310,7 @@ def main(_):
     # Train the model after 4 actions
     update_after_actions = 10
     # How often to update the target network
-    update_target_network = train_feat.shape[0]#500#8000
+    update_target_network = train_feat.shape[0]
     # Using huber loss for stability
     loss_function = K.losses.Huber()
 
@@ -473,18 +471,18 @@ def main(_):
             history_report_bacc = metrics.classification_report(true_label,error,digits=3)
             history_cov_bacc = metrics.confusion_matrix(true_label,error)
             best_bacc = metrics.balanced_accuracy_score(true_label, error)
-            q_network.save_weights('models/best_q_network_bacc_both_100pat_nounkn_mel1_vienna',save_format='tf')
+            q_network.save_weights('models/best_q_network_bacc',save_format='tf')
 
         if best_reward < episode_val_score:
             history_cov_reward = metrics.confusion_matrix(true_label, error)
             history_report_reward = metrics.classification_report(true_label,error,digits=3)
             best_reward = episode_val_score
-            q_network.save_weights('models/best_q_network_reward_both_100pat_nounkn_mel1_vienna',save_format='tf')
+            q_network.save_weights('models/best_q_network_reward',save_format='tf')
 
         ##Return to train
         _,patients = derm.reset(train_feat,train_labels, train_labels.shape[0], n_words, vocab,True,Flags.n_patients,counts)
 
-    q_network.save_weights('models/RL_Decision_Making/q_network_final_both_100pat_nounkn_mel1_vienna',
+    q_network.save_weights('models/RL_Decision_Making/q_network_final',
                            save_format='tf')
 
     print('The scores for best validation BAcc are:')
