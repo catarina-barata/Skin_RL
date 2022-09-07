@@ -20,10 +20,12 @@ To run the demo (train an RL agent and make predictions on a validation set):
 2) Run python RL_Skin_Cancer_Demo.py
 
 3) You can manipulate the **number of patients per episode** (episode length/number of iterations), the **number of episodes**, and whether to **use or not the unknown action**.
-An example: - python RL_Skin_Cancer_Demo.py --n_patients 100 --n_episodes 150 --use_unknown False
+An example: python RL_Skin_Cancer_Demo.py --n_patients 100 --n_episodes 150 --use_unknown False
 
 4) We give the possibility to try with different reward tables, where the penalty for the use of the **Unknown** class is changed -simply (un)comment the code of the desired reward in funtion **step** (class **Dermatologist**).
 You can also use this function to define new reward tables
+
+**Expected Outcome** - You should be able to train an RL model that is able to predict the Q-values of the different actions (diagnostic decisions) given the features and softmax probabilities of a standard supervised model. The model then chooses the action with the highest Q-value. A numerical evaluation is carried out using the confusion matrix to show the performance of the RL model on a validation set.
 
 ### Try your data
 To try new data, some modifications must be done:
