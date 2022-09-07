@@ -482,7 +482,7 @@ def main(_):
         ##Return to train
         _,patients = derm.reset(train_feat,train_labels, train_labels.shape[0], n_words, vocab,True,Flags.n_patients,counts)
 
-    q_network.save_weights('models/RL_Decision_Making/q_network_final',
+    q_network.save_weights('models/q_network_final',
                            save_format='tf')
 
     print('The scores for best validation BAcc are:')

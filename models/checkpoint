@@ -1,2 +1,0 @@
-model_checkpoint_path: "best_q_network_bacc"
-all_model_checkpoint_paths: "best_q_network_bacc"
