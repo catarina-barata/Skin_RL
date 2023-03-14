@@ -14,7 +14,7 @@ The models were trained on Microsoft Windows 10 Pro 64bit and Ubunto 18.04
 * To install the demo: Follow https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository and use the following link https://github.com/catarina-barata/Skin_RL.git
 
 ### Data preparation
-* Download the datasets to the *data* folder, as described in the data/Data_Download.txt file
+* Download the datasets to the **data** folder, as described in the data/Data_Download.txt file
 
 ### Run Demo
 To run the demo (train an RL agent and make predictions on a validation set):
