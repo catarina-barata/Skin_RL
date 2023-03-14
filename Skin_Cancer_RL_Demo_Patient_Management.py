@@ -513,11 +513,5 @@ if __name__ == '__main__':
         default= 3,
         help='Number of episodes to play'
     )
-    parser.add_argument(
-        '--set_distribution',
-        type=bool,
-        default= False,
-        help='Whether to set sample distribution'
-    )
     Flags, unparsed = parser.parse_known_args()
     tf1.app.run(main=main)
