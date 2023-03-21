@@ -1,7 +1,7 @@
 # 	Incorporating human values into AI-based decision support
  
 ### Overview
-This repository contains the source code to implement a deep-Q learning model that incorporates human-values in the diagnostic process. The model receives features from a standard neural network (e.g. CNN) as well as the softmax probabilities for the different classes. It then makes the final decision, based on the policy learned from a reward table defined by medical experts. The model may keep or change the diagnosis when compared witht the CNN. Additionally, we consider the possibility for the model to pick an "unknown" action, where no class is picked.
+This repository contains the source code to implement a deep-Q learning model that incorporates human-values in the diagnostic/management process of melanoma patients. The model receives features from a standard neural network (e.g. CNN) as well as the softmax probabilities for the different classes. It then makes a recommendation, based on the policy learned from a reward table defined by medical experts. The model may keep or change the diagnosis when compared witht the CNN. Additionally, we consider the possibility for the model to recommend management actions.
 
 ### System Requirements
 Most experiments were run using a desktop with 16Gb of RAM, an Intel i5-7600 CPU @350HZ, and an NIVIDA Titan Xp. 
