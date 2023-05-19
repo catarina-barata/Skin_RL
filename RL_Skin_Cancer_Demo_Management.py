@@ -150,6 +150,8 @@ class Dermatologist(Env):
 
     def step(self,patients,n_patients,n_actions,action):
 
+        #Reward Table (#actions X #Classes - AKIEC/BCC/BKL/DF/MEL/NV/VASC)
+
         if n_actions == 2:
             ## PERSONAL (Expert 1) - 2 actions
             reward_table = np.array([[-3, -4,  4,  4, -5,  4,  4], #dismiss
@@ -204,8 +206,8 @@ class Dermatologist(Env):
         else:
             ## CONSENSOUS MEDIAN - 3 Actions
             reward_table = np.array([[  -2,  -3,   5,   5, -5,   5,    5], #dismiss
-                                     [   3,   1,  -2,  -2, -5,  -2,   -2], #locally
-                                     [   2, 4.5,-2.5,-2.5,  5, -2.5,-2.5], #excise
+                                     [   3,   1,  -1,  -1, -5,  -1,   -1], #cryo
+                                     [   2, 4.5,  -3,  -3,  5,  -3,  -3], #excise
                                     ],np.float32)
         
 

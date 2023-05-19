@@ -146,10 +146,10 @@ class Dermatologist(Env):
         return pat_feat,pat_diag
 
     def step(self,patient_feat,patient_diag,n_actions,action,next_id):
-        ### CONSENSOUS -3 Actions
-        reward_table = np.array([[ 5, -5], #dismiss
-                                 [ 2, -1], #monitor
-                                 [-1,  5], #excise
+        ### CONSENSOUS MEDIAN -3 Actions
+        reward_table = np.array([[    5,   -5], #dismiss
+                                 [  1.5, -1.5], #monitor
+                                 [ -1.5,    5], #excise
                                  ],np.float32)
 
 
