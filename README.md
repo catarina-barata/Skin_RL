@@ -59,7 +59,7 @@ To try new data, some modifications must be done:
 You may also need to adjust the Q-network with additional layers (function **create_q_model**).
 
 ### Reference
-
+```
 @article{barata2023reinforcement,
   title={A reinforcement learning model for AI-based decision support in skin cancer},
   author={Barata, Catarina and Rotemberg, Veronica and Codella, Noel CF and Tschandl, Philipp and Rinner, Christoph and Akay, Bengu Nisa and Apalla, Zoe and Argenziano, Giuseppe and Halpern, Allan and Lallas, Aimilios and others},
@@ -68,4 +68,4 @@ You may also need to adjust the Q-network with additional layers (function **cre
   year={2023},
   publisher={Nature Publishing Group US New York}
 }
- 
+```
