@@ -109,7 +109,7 @@ class Dermatologist(Env):
         self.gt = n_gt
 
         # Set shower length
-        self.number_of_cases = 1
+        self.number_of_cases = 0
         
         if np.any(np.where(np.sum(patient_feat,1)==0)) == False:
             self.limit = patient_feat.shape[0]-1

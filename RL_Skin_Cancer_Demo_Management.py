@@ -146,7 +146,7 @@ class Dermatologist(Env):
         self.revised_state = self.state
         self.gt = n_gt
         # Set shower length
-        self.number_of_patients = 1
+        self.number_of_patients = 0
 
     def step(self,patients,n_patients,n_actions,action):
 

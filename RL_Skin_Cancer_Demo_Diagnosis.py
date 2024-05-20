@@ -50,20 +50,20 @@ def read_and_decode(dataset, batch_size, is_training, data_size,n_patients):
         dataset = dataset.repeat(None)
     return dataset
 
-def create_q_model(n_classes,n_actions):
-    
+def create_q_model(n_classes,n_words,n_actions):
+
     inputs = K.layers.Input(n_classes)
 
-    feat = K.layers.Lambda(lambda x: x[:, 0:n_classes - n_actions + 1])(inputs)
+    feat = K.layers.Lambda(lambda x: x[:, 0:n_classes - n_words])(inputs)
 
     emb = K.layers.Dropout(0.05)(feat)
 
-    prob = K.layers.Lambda(lambda x: x[:, n_classes - n_actions + 1:n_classes])(inputs)
+    prob = K.layers.Lambda(lambda x: x[:, n_classes - n_words:n_classes])(inputs)
 
     emb = K.layers.Dense(256, activation="relu")(emb)
 
     emb = K.layers.Dropout(0.05)(emb)
-
+    
     emb = K.layers.Concatenate(axis=1)([emb, prob])
 
     action = K.layers.Dense(n_actions, activation=None)(emb)
@@ -141,7 +141,7 @@ class Dermatologist(Env):
         self.revised_state = self.state
         self.gt = n_gt
         # Set shower length
-        self.number_of_patients = 1
+        self.number_of_patients = 0
 
     def step(self,patients,n_patients,vocab,action):
         ### UNKN_reward = -1
@@ -277,11 +277,11 @@ def main(_):
 
     derm = Dermatologist(patients,n_words,vocab)
 
-    q_network = create_q_model(derm.state.shape[0],len(vocab))
+    q_network = create_q_model(derm.state.shape[0],n_words,Flags.n_actions)
 
     q_network.summary()
 
-    target_network = create_q_model(derm.state.shape[0],len(vocab))
+    target_network = create_q_model(derm.state.shape[0],n_words,Flags.n_actions)
 
     optimizer = K.optimizers.Adam(learning_rate=0.025, clipnorm=1.0)
 
