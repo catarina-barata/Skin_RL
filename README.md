@@ -1,4 +1,4 @@
-# 	Incorporating human values into AI-based decision support
+# 	A reinforcement learning model for AI-based decision support in skin cancer
  
 ### Overview
 This repository contains the source code to implement a deep-Q learning model that incorporates human-values in the diagnostic/management process of melanoma patients. The model receives features from a standard neural network (e.g. CNN) as well as the softmax probabilities for the different classes. It then makes a recommendation, based on the policy learned from a reward table defined by medical experts. The model may keep or change the diagnosis when compared witht the CNN. Additionally, we consider the possibility for the model to recommend management actions.
@@ -57,4 +57,15 @@ To try new data, some modifications must be done:
 
 2) For new (medical) problems, you will also need to adjust the **initialize_clinical_practice** to your dataset, as well as the reward tables.
 You may also need to adjust the Q-network with additional layers (function **create_q_model**).
- 
+
+### Reference
+```
+@article{barata2023reinforcement,
+  title={A reinforcement learning model for AI-based decision support in skin cancer},
+  author={Barata, Catarina and Rotemberg, Veronica and Codella, Noel CF and Tschandl, Philipp and Rinner, Christoph and Akay, Bengu Nisa and Apalla, Zoe and Argenziano, Giuseppe and Halpern, Allan and Lallas, Aimilios and others},
+  journal={Nature Medicine},
+  pages={1--6},
+  year={2023},
+  publisher={Nature Publishing Group US New York}
+}
+```
